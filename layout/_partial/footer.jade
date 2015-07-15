@@ -1,0 +1,24 @@
+p
+  - min = moment().year()
+  - max = moment().year()
+  each post in site.posts.toArray()
+    - min = Math.min(post.date.year(), min)
+    - max = Math.max(post.date.year(), max)
+  | &copy;&nbsp;
+  a(href=url_for(theme.menu['archives'])) #{min}-#{max}
+  | &nbsp;
+  a(href=url_for(theme.menu['about'])) #{config.author}
+  | &nbsp;
+  a(href='https://creativecommons.org/licenses/by-nc-sa/4.0/') CC BY-NC-SA 4.0
+p
+  | Powered by&nbsp;
+  a(href='https://hexo.io') Hexo
+  | &nbsp;and Theme by&nbsp;
+  a(href='https://github.com/blackgear/mono_hexo') Mono
+
+if !cache
+  script(src='/js/baseliner.js')
+  script(type='text/javascript').
+    window.onload = function() {
+      baseliner = new Baseliner({'gridColor': [255, 155, 135, 255], 'gridHeight': 7 });
+    }

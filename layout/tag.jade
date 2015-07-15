@@ -1,0 +1,7 @@
+extends _base
+
+block content
+  main
+    p #{__('tags')} - #{page.tag}
+    each post in page.posts.toArray()
+      +item(post)

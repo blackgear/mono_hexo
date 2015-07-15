@@ -1,0 +1,23 @@
+extends _base
+
+block content
+  article
+    h1 #{page.title}
+    p
+      | #{__('postat')}:&nbsp;
+      time(datetime=date(page.date, 'YYYY-MM-DDTHH:mm:ssZ'))
+        a(href=url_for(theme.menu["archives"]))
+          = date(page.date, config.date_format)
+      if page.categories
+        | &nbsp;#{__('categories')}:
+        each category in page.categories.toArray()
+          | &nbsp;
+          span
+            a(href=url_for(category.path)) #{category.name}
+      if page.tags
+        | &nbsp;#{__('tags')}:
+        each tag in page.tags.toArray()
+          | &nbsp;
+          span
+            a(href=url_for(tag.path)) #{tag.name}
+    != page.content

@@ -1,0 +1,9 @@
+extends _base
+
+block content
+  main
+    each post in page.posts.toArray()
+      if year != post.date.year()
+        - year = post.date.year()
+        p #{__('postat')} - #{year}
+      +item(post)
