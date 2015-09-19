@@ -29,10 +29,11 @@ main
     font-size 1.25rem
     font-weight 700
     margin 1.75rem 0 0
-  nav
-    margin .875rem 0
-    text-align right
-    font-size 1.25rem
-    font-weight 700
     a
-      margin 0 .1875rem
+      float right
+      display block
+    a + a:after
+      content '·'
+      margin 0 .125rem
+      color rgba(0,0,0,.87)
+      text-shadow 0 1px 1px rgba(0,0,0,.1)

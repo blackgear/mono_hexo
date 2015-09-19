@@ -3,13 +3,10 @@ extends _base
 block content
   main
     p #{__('index')} - P#{page.current}
-    each post in page.posts.toArray()
-      +item(post)
-    if page.total > 1
-      nav
-        if page.prev
-          a(href=url_for(page.prev_link)) #{__('prev')}
-        if page.prev && page.next
-          span &middot;
+      if page.total > 1
         if page.next
           a(href=url_for(page.next_link)) #{__('next')}
+        if page.prev
+          a(href=url_for(page.prev_link)) #{__('prev')}
+    each post in page.posts.toArray()
+      +item(post)
