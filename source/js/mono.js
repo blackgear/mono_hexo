@@ -15,7 +15,7 @@
       $timing = {},
       $isPreloading = false,
       $isWaitingForCompletion = false,
-      $delayBeforePreload;
+      $delayBeforePreload = 100;
 
   function removeHash(url) {
     var index = url.indexOf('#');
