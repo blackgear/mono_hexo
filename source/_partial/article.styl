@@ -3,28 +3,29 @@ article
   text-justify inter-ideograph
   max-width 42rem
   margin 0 auto
-  padding 2.625rem .75rem 0
+  padding 2.625rem 0.75rem 0
   line-height 1.75rem
-  div, p, blockquote, pre, ul, ol, table, figure, section, article, header, footer
-    margin .875rem 0 0
-    padding 0
-  div, p, blockquote, pre, ul, ol, table, figure, iframe, section, article, header, footer
-    div, p, blockquote, pre, ul, ol, table, figure, iframe, section, article, header, footer
-      margin 0
-  iframe, img, video
-      display block
-      margin .875rem 0
+div, p, blockquote, pre, ul, ol, table, figure
+  margin 0.875rem 0 0
+  padding 0
+div, p, blockquote, pre, ul, ol, table, figure, iframe
+  div, p, blockquote, pre, ul, ol, table, figure, iframe
+    margin 0
+iframe, img, video
+    display block
+    margin 0.875rem 0
+article
   h1, h2, h3, h4, h5, h6
     margin 1.75rem 0 0
     padding 0
     font-weight inherit
-    color rgba(0,0,0,1)
+    color rgba(0, 0, 0, 1)
     &:before
-      margin-right .25em
+      margin-right 0.25em
     a
-      color rgba(0,0,0,1)
+      color rgba(0, 0, 0, 1)
     a, em, u, abbr
-      border-bottom-color: rgba(0,0,0,1)
+      border-bottom-color: rgba(0, 0, 0, 1)
   h1
     font-size 1.75rem
     &:before
@@ -33,166 +34,165 @@ article
     font-size 1.5rem
     &:before
       content '##'
-  h3
-    font-size 1.25rem
-    &:before
-      content '###'
-  h4
-    font-size 1rem
-    &:before
-      content '####'
-  h5
-    font-size 1rem
-    &:before
-      content '#####'
-  h6
-    font-size 1rem
-    &:before
-      content '######'
-  blockquote
-    border-left .25rem solid rgba(0,0,0,.2)
-    padding .4375rem 1rem .4375rem .75rem
-  figure
-    img
-      display block
-      margin 0 auto
-    figcaption
-      display block
-      text-align center
-      font-style italic
-  iframe
-    vertical-align text-bottom
-  hr
-    padding-top 3.5rem
-    margin -.125rem 2.5rem 3.4375rem
-    height 0
-    border none
-    border-bottom .1875rem dashed rgba(0,0,0,.36)
-  pre
-    font-family 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'monospace'
-    font-size .875rem
-    line-height 1.3125rem
-    margin-top .8125rem
-    padding .875rem .9375rem .8125rem
-    white-space pre
-    word-wrap normal
-    overflow auto
-    border .0625rem solid rgba(0,0,0,.1)
-    border-radius .1875rem
-    background-color rgba(0,0,0,.01)
-    code
-      padding 0
-      margin 0
-      vertical-align baseline
-      border none
-      background-color transparent
-  table
-    display table
+h3
+  font-size 1.25rem
+  &:before
+    content '###'
+h4
+  font-size 1rem
+  &:before
+    content '####'
+h5
+  font-size 1rem
+  &:before
+    content '#####'
+h6
+  font-size 1rem
+  &:before
+    content '######'
+blockquote
+  border-left 0.25rem solid rgba(0, 0, 0, .2)
+  padding 0.4375rem 1rem 0.4375rem 0.75rem
+figure
+  img
+    display block
+    margin 0 auto
+  figcaption
+    display block
+    text-align center
+    font-style italic
+iframe
+  vertical-align text-bottom
+hr
+  padding-top 3.5rem
+  margin -0.125rem 2.5rem 3.4375rem
+  height 0
+  border none
+  border-bottom 0.1875rem dashed rgba(0, 0, 0, .36)
+pre
+  font-family 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'monospace'
+  font-size 0.875rem
+  line-height 1.3125rem
+  margin-top 0.8125rem
+  padding 0.875rem 0.9375rem 0.8125rem
+  white-space pre
+  word-wrap normal
+  overflow auto
+  border 0.0625rem solid rgba(0, 0, 0, .1)
+  border-radius 0.1875rem
+  background-color rgba(0, 0, 0, .01)
+  code
     padding 0
-    margin 1.75rem auto
-    min-width 50%
-    border-collapse collapse
-    border-spacing 0
-    caption
-      padding 0
-    thead
-      th
-        text-align left
-    tbody
-      margin 0 1rem
-      tr:nth-of-type(2n+1)
-        td, th
-          background-color rgba(0,0,0,.03)
-      tr:last-child
-        td, th
-          padding-bottom .75rem
-    td, th
-      padding .4375rem 1rem .4rem
-      border .0625rem solid rgba(225,225,225,.96)
-  ul, ol
-    padding-left 2rem
-    li
-      margin 0
-      padding 0
-      list-style-position outside
+    margin 0
+    vertical-align baseline
+    border none
+    background-color transparent
+table
+  display table
+  padding 0
+  margin 1.75rem auto
+  min-width 50%
+  border-collapse collapse
+  border-spacing 0
+  caption
+    padding 0
+  thead
+    th
+      text-align left
+  tbody
+    margin 0 1rem
+    tr:nth-of-type(2n+1)
+      td, th
+        background-color rgba(0, 0, 0, .03)
+    tr:last-child
+      td, th
+        padding-bottom 0.75rem
+  td, th
+    padding 0.4375rem 1rem 0.4rem
+    border 0.0625rem solid rgba(225, 225, 225, .96)
+ul, ol
+  padding-left 2rem
+  li
+    margin 0
+    padding 0
+    list-style-position outside
+ul > li
+  list-style-type square
   ul > li
-    list-style-type square
+    list-style-type disc
     ul > li
-      list-style-type disc
-      ul > li
-        list-style-type circle
+      list-style-type circle
+ol > li
+  list-style-type decimal
   ol > li
-    list-style-type decimal
+    list-style-type upper-roman
     ol > li
-      list-style-type upper-roman
-      ol > li
-        list-style-type lower-roman
-  li > ul, li > ol
-    padding-left 1rem
+      list-style-type lower-roman
+li > ul, li > ol
+  padding-left 1rem
+article
   a
     padding-bottom 0.025rem
-    color rgba(50,120,255,.8)
-  b, strong
-    font-weight 700
-  u
-    padding-bottom .05em
-    font-style inherit
-    font-weight inherit
-    text-decoration inherit
-    border-bottom .0625rem solid rgba(0,0,0,.6)
-  u + u
-    margin-left 0.125em
-  em
-    font-style inherit
-    font-weight inherit
-    text-decoration inherit
-    text-emphasis filled circle
-    text-emphasis-position under
-  code
-    font-family 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'monospace'
-    font-size .875rem
-    line-height 0
-    color rgba(0,0,0,.54)
-    margin 0 .125rem
-    padding .1875rem .125rem .0625rem
-    vertical-align .0625rem
-    word-break break-all
-    border .0625rem solid rgba(0,0,0,.1)
-    border-radius .1875rem
-    background-color rgba(0,0,0,.01)
-  img, video
-    zoom 50%
-    max-width 100%
-    border 0
-  cite
-    font-style inherit
-    &:before
-      content '\300A'
-      line-height inherit
-    &:after
-      content '\300B'
-      line-height inherit
-  abbr[title]
-    padding-bottom 0.05em
-    cursor help
-    border-bottom .0625rem dotted rgba(0,0,0,.6)
-  dfn
-    font-style italic
-  mark
-    background rgba(255,255,0,.6)
-    padding .125rem 0
-  q
-    quotes '\201C' '\201D' '\2018' '\2019'
-  small
-    font-size 80%
-  sub, sup
-    font-size 75%
-    line-height 0
-    position relative
-    vertical-align baseline
-  sup
-    top -0.5em
-  sub
-    bottom -0.25em
-aside
-  margin 1.75rem 0 0
+    color rgba(50, 120, 255, .8)
+b, strong
+  font-weight 700
+u
+  padding-bottom 0.05em
+  font-style inherit
+  font-weight inherit
+  text-decoration inherit
+  border-bottom 0.0625rem solid rgba(0, 0, 0, .6)
+u + u
+  margin-left 0.125em
+em
+  font-style inherit
+  font-weight inherit
+  text-decoration inherit
+  text-emphasis filled circle
+  text-emphasis-position under
+code
+  font-family 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'monospace'
+  font-size 0.875rem
+  line-height 0
+  color rgba(0, 0, 0, .54)
+  margin 0 0.125rem
+  padding 0.1875rem 0.125rem 0.0625rem
+  vertical-align 0.0625rem
+  word-break break-all
+  border 0.0625rem solid rgba(0, 0, 0, .1)
+  border-radius 0.1875rem
+  background-color rgba(0, 0, 0, .01)
+img, video
+  zoom 50%
+  max-width 100%
+  border 0
+cite
+  font-style inherit
+  &:before
+    content '\300A'
+    line-height inherit
+  &:after
+    content '\300B'
+    line-height inherit
+abbr[title]
+  padding-bottom 0.05em
+  cursor help
+  border-bottom 0.0625rem dotted rgba(0, 0, 0, .6)
+dfn
+  font-style italic
+mark
+  background rgba(255, 255, 0, .6)
+  padding 0.125rem 0
+q
+  quotes '\201C' '\201D' '\2018' '\2019'
+small
+  font-size 80%
+sub, sup
+  font-size 75%
+  line-height 0
+  position relative
+  vertical-align baseline
+sup
+  top -0.5em
+sub
+  bottom -0.25em
