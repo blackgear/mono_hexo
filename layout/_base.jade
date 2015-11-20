@@ -1,11 +1,11 @@
 include _macro/item
 doctype html
-html(lang=config.language)
+html(lang=config.language, manifest='/mono.appcache')
   head
     include _partial/head
   body
+    block content
     header
       include _partial/header
-    block content
     footer
       include _partial/footer
