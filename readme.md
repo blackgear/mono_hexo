@@ -2,7 +2,7 @@
 
 Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus开发。
 
-本主题纯粹根据作者自身的需求定制，完全没有考虑过其他任何可能的潜在用户的需求，如果你希望使用这个主题，可根据MIT协议自行修改以符合你自己的需求。
+本主题根据仅作者自身的需求定制，完全不考虑其他任何可能的潜在用户的需求，如果你希望添加其他功能，可根据MIT协议自行修改以符合你自己的需求。
 
 ## 预览
 
@@ -18,7 +18,7 @@ Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus�
 
 1. 更改**站点** `_config.yml` 中的 `theme` 字段设置为 `mono`
 
-2. 更改**主题** `_config.yml` 中的设置。
+2. 更改**主题** `_config.yml` 中的设置，调整主题右上角快捷链接的内容。
 
 3. 更改`source`目录下的图标。
 
@@ -35,15 +35,17 @@ Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus�
 
 3. 使用html5语义化标签与css3选择器，不使用class与id
 
-4. 集成FastClick与InstantClick，提升页面载入速度
+4. 使用PJAX、APP Cache、异步加载等技术提升页面载入与渲染速度
 
 5. 不支持各类统计或是社会化评论等有追踪用户嫌疑的脚本
 
 6. 以最新正式版本的Mac/iOS Safari为CSS/JS的最低兼容性标准
 
-7. 优先为触摸板/触摸屏操作为主的Mac/iOS Safari调整设计。
+7. 优先为触摸板/触摸屏操作为主的Mac/iOS Safari调整设计
 
-*基于[Entry.css](http://zencode.in/Entry.css/)移植实现基线对齐。
+*基于[Entry.css](http://zencode.in/Entry.css/)移植实现基线对齐
+
+*基于[InstantClick](http://instantclick.io/)移植实现PAJX载入
 
 ## LICENSE
 
