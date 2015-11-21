@@ -2,5 +2,5 @@ mixin item(atom)
   section
     a(href=url_for(atom.path))
       h1 #{atom.title}
-      time(datetime=date(atom.date, 'YYYY-MM-DDTHH:mm:ssZ'))
+      time(datetime=date(atom.date, 'YYYY-MM-DDTHH:mm:ssZ'), pubdate)
         = date(atom.date, config.dateformat)
