@@ -7,3 +7,5 @@ convert _origin.png  -bordercolor white -border 0 \
     \( -clone 0 -resize 48x48 \) \
     \( -clone 0 -resize 64x64 \) \
     -delete 0 -alpha off -colors 256 favicon.ico
+
+echo $RANDOM; sed -i -e "s/#.*/# $(printf %04x $RANDOM $RANDOM)/g" mono.appcache

@@ -4,7 +4,7 @@ block content
   article
     h1 #{page.title}
     p
-      | #{__('postat')}:&nbsp;
+      | #{__('this')}#{__('postat')}:&nbsp;
       time(datetime=date(page.date, 'YYYY-MM-DDTHH:mm:ssZ'), pubdate)
         a(href=url_for(theme.menu["archives"]))
           = date(page.date, config.date_format)
@@ -22,7 +22,7 @@ block content
             a(href=url_for(tag.path)) #{tag.name}
     != page.content
     p
-      | #{__('editat')}:&nbsp;
+      | #{__('this')}#{__('editat')}:&nbsp;
       time(datetime=date(page.updated, 'YYYY-MM-DDTHH:mm:ssZ'))
         = date(page.updated, config.date_format)
       | &nbsp;#{__('count')}:&nbsp;#{(page.raw.length/1024).toFixed(2)}kb&nbsp;&#128282;
