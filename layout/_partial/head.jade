@@ -1,7 +1,9 @@
 meta(charset='UTF-8')
 title #{page.title ? page.title : config.title}
-meta(name='author', content=config.author)
-meta(name='desciption', content=config.description)
+meta(name='author', content=page.author ? page.author : config.author)
+meta(name='desciption', content=page.description ? page.description : config.description)
+if page.description
+  meta(name='keywords', content=_.union(_.pluck(page.categories.toArray(), 'name'), _.pluck(page.tags.toArray(), 'name')))
 meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no')
 link(rel='stylesheet', type='text/css', href='/mono.css', media='none' onload='media=\'all\'')
 noscript
@@ -10,4 +12,5 @@ link(rel='alternate', type='application/atom+xml', title='RSS', href='/atom.xml'
 link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
 link(rel='icon',type='image/x-icon', href='/favicon.ico')
 link(rel='apple-touch-icon', href='/apple-touch-icon.png')
+link(rel='canonical', href=page.permalink)
 script(src='/mono.js', defer)
