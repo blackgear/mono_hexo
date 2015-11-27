@@ -5,9 +5,8 @@ meta(name='desciption', content=page.description ? page.description : config.des
 if page.description
   meta(name='keywords', content=_.union(_.pluck(page.categories.toArray(), 'name'), _.pluck(page.tags.toArray(), 'name')))
 meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no')
-link(rel='stylesheet', type='text/css', href='/mono.css', media='none' onload='media=\'all\'')
-noscript
-  link(rel='stylesheet', type='text/css', href='/mono.css')
+meta(name="theme-color", content="#2c63c8")
+link(rel='stylesheet', type='text/css', href='/mono.css')
 link(rel='alternate', type='application/atom+xml', title='RSS', href='/atom.xml')
 link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
 link(rel='icon', href='/favicon.png')
