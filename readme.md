@@ -11,8 +11,9 @@ Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus�
 ## 安装
 
     $ cd your-hexo-site
-    $ git clone https://github.com/BlackGear/Mono_Hexo themes/mono
-    $ npm install hexo-renderer-jade --save
+    $ git clone https://github.com/blackgear/mono_hexo.git themes/mono
+    $ npm install hexo-renderer-jade hexo-renderer-stylus --save
+
 
 ## 配置
 
@@ -51,7 +52,7 @@ Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus�
 
 The MIT License
 
-Copyright (c) 2015 Daniel
+Copyright (c) 2016 Daniel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
