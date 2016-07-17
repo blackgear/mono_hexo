@@ -2,8 +2,6 @@ meta(charset='UTF-8')
 title #{page.title ? page.title : config.title}
 meta(name='author', content=page.author ? page.author : config.author)
 meta(name='desciption', content=page.description ? page.description : config.description)
-if page.description
-  meta(name='keywords', content=_.union(_.pluck(page.categories.toArray(), 'name'), _.pluck(page.tags.toArray(), 'name')))
 meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no')
 meta(name="theme-color", content="#2c63c8")
 link(rel='stylesheet', type='text/css', href='/mono.css')
@@ -11,5 +9,5 @@ link(rel='alternate', type='application/atom+xml', title='RSS', href='/atom.xml'
 link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
 link(rel='icon', href='/favicon.png')
 link(rel='apple-touch-icon', href='/favicon.png')
-link(rel='canonical', href=page.permalink)
+link(rel='canonical', href=url)
 script(src='/mono.js', defer)
