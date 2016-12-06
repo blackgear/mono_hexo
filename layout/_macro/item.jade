@@ -1,6 +1,34 @@
 mixin item(atom)
   section
     a(href=url_for(atom.path))
-      h1 #{atom.title}
-      time(datetime=date(atom.date, 'YYYY-MM-DDTHH:mm:ssZ'), pubdate)
+      h2 #{atom.title}
+      time(datetime=date(atom.date, 'YYYY-MM-DDTHH:mm:ssZ'))
         = date(atom.date, config.dateformat)
+
+mixin meta(page)
+  pre
+    | #{__('this')}#{__('postat')}:&nbsp;
+    time(datetime=date(page.date, 'YYYY-MM-DDTHH:mm:ssZ'))
+      a(href=url_for(theme.menu["archives"]))
+        = date(page.date, config.date_format)
+    | &nbsp;
+    | #{__('last')}#{__('editat')}:&nbsp;
+    time(datetime=date(page.updated, 'YYYY-MM-DDTHH:mm:ssZ'))
+      a(href=url_for(theme.menu["archives"]))
+        = date(page.updated, config.date_format)
+    if page.categories
+      | &nbsp;
+      | #{__('categories')}:
+      each category in page.categories.toArray()
+        | &nbsp;
+        span
+          a(href=url_for(category.path)) #{category.name}
+    if page.tags
+      | &nbsp;
+      | #{__('tags')}:
+      each tag in page.tags.toArray()
+        | &nbsp;
+        span
+          a(href=url_for(tag.path)) #{tag.name}
+    | &nbsp;
+    | #{__('count')}:&nbsp;#{(page.raw.length/1024).toFixed(2)}kb

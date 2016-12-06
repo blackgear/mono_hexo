@@ -3,26 +3,5 @@ extends _base
 block content
   article
     h1 #{page.title}
-    p
-      | #{__('this')}#{__('postat')}:&nbsp;
-      time(datetime=date(page.date, 'YYYY-MM-DDTHH:mm:ssZ'), pubdate)
-        a(href=url_for(theme.menu["archives"]))
-          = date(page.date, config.date_format)
-      if page.categories
-        | &nbsp;#{__('categories')}:
-        each category in page.categories.toArray()
-          | &nbsp;
-          span
-            a(href=url_for(category.path)) #{category.name}
-      if page.tags
-        | &nbsp;#{__('tags')}:
-        each tag in page.tags.toArray()
-          | &nbsp;
-          span
-            a(href=url_for(tag.path)) #{tag.name}
+    +meta(page)
     != page.content
-    p
-      | #{__('this')}#{__('editat')}:&nbsp;
-      time(datetime=date(page.updated, 'YYYY-MM-DDTHH:mm:ssZ'))
-        = date(page.updated, config.date_format)
-      | &nbsp;#{__('count')}:&nbsp;#{(page.raw.length/1024).toFixed(2)}kb&nbsp;&#128282;
