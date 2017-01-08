@@ -1,6 +1,6 @@
 ## 简介
 
-Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Jade与Stylus开发。
+Mono是一个素雅简洁的[Hexo](https://hexo.io)主题，基于Pug与Stylus开发。
 
 本主题根据仅作者自身的需求定制，完全不考虑其他任何可能的潜在用户的需求，如果你希望添加其他功能，可根据MIT协议自行修改以符合你自己的需求。
 

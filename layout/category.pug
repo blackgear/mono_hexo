@@ -1,7 +1,7 @@
-extends _base
+extends _base.pug
 
 block content
   main
-    p #{__('tags')} - #{page.tag}
+    p #{__('categories')} - #{page.category}
     each post in page.posts.toArray()
       +item(post)
