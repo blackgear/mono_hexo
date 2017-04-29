@@ -11,24 +11,24 @@ mixin meta(page)
     time(datetime=date(page.date, 'YYYY-MM-DDTHH:mm:ssZ'))
       a(href=url_for(theme.menu["archives"]))
         = date(page.date, config.date_format)
-    | &nbsp;
+    = '\n'
     | #{__('last')}#{__('editat')}:&nbsp;
     time(datetime=date(page.updated, 'YYYY-MM-DDTHH:mm:ssZ'))
       a(href=url_for(theme.menu["archives"]))
         = date(page.updated, config.date_format)
     if page.categories
-      | &nbsp;
+      = '\n'
       | #{__('categories')}:
       each category in page.categories.toArray()
         | &nbsp;
         span
           a(href=url_for(category.path)) #{category.name}
     if page.tags
-      | &nbsp;
+      = '\n'
       | #{__('tags')}:
       each tag in page.tags.toArray()
         | &nbsp;
         span
           a(href=url_for(tag.path)) #{tag.name}
-    | &nbsp;
+    = '\n'
     | #{__('count')}:&nbsp;#{(page.raw.length/1024).toFixed(2)}kb
