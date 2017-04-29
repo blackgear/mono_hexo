@@ -7,7 +7,7 @@ cat << _EOF_ > mono.appcache
 CACHE MANIFEST
 #$(printf %x $(date +%s))
 mono.css
-favicon.ico
+favicon.png
 NETWORK:
 *
 _EOF_
