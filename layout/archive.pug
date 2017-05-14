@@ -1,9 +1,9 @@
 extends _base.pug
 
 block content
-  main
+  article
     each post in page.posts.toArray()
       if year != post.date.year()
         - year = post.date.year()
-        p #{__('postat')} - #{year}
+        nav #{__('postat')} - #{year}
       +item(post)

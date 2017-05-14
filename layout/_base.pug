@@ -1,11 +1,11 @@
-include _macro/item.pug
+include _macro/macro.pug
 doctype html
 html(lang=config.language, manifest='/mono.appcache')
   head
     include _partial/head.pug
   body
-    block content
     header
       include _partial/header.pug
+    block content
     footer
       include _partial/footer.pug
